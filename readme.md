@@ -46,9 +46,15 @@ gitのパブリックリポジトリなどに上げる際は.gitignoreに追加�
 ### 各変数の説明
 
 `MYSQL_USER=` mysqlが自動で生成してくれるユーザー
+
 `MYSQL_DATABASE`mysqlが自動で生成してくれるデータベース
+
 `MYSQL_PASSWORD` mysqlが自動で生成してくれるユーザーのパスワード
+
 `MYSQL_ROOT_PASSWORD` mysqlのrootのパスワード
+
 `DATABASE_HOST`DBのホスト名（イメージ名に依存します)
+
 `FLASK_APP` Flaskで使用するファイルの指定
+
 `FLASK_ENV` flaskへの引数
