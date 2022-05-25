@@ -1,0 +1,7 @@
+USE sample_db;
+
+CREATE TABLE users(
+	user_id INT(8) PRIMARY KEY AUTO_INCREMENT,
+	mail VARCHAR(128) NOT NULL UNIQUE,
+	password VARCHAR(64) NOT NULL);
+
