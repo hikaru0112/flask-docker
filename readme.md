@@ -1,16 +1,19 @@
 # flask_template
-Flaskの環境をDockerで簡単構築できるアプリケーションです。
+Flaskの環境をDockerでワンライナーで構築、開発環境を切り離せるアプリケーションです。
 
 ## デフォルトのイメージ名
 
 アプリケーションイメージ： app
 データベースイメージ： DB
 
-### DockerImage
+
+## DockerImage
 * mysql:8.0-oracle
 * Python:3
 
 Flaskなどについてはpipに依存するため不定
+
+各自必要なパッケージなどはディレクトリ直下の`docekrfile`に追記してください。
 
 ## 実行方法
 
@@ -25,6 +28,22 @@ docker-compose up --build
 ## 実行フォルダの指定について
 
 `.env`ファイル内の`FLASK_APP`環境変数で指定してください。
+
+## ディレクトリについて
+
+flask-docker
+┣ database/ 
+┃   └ dockerfile - dbの設定に使うdockerfile
+┣ exemple/ - デフォルトでflaskが読み込まれるディレクトリ
+┃   └ app.py - デフォルトで読み込まれるpythonファイル
+┣　initdb.d/ - db作成時に読み込まれるディレクトリ
+┃   └ init.sql - 自動でsqlが実行されるファイル
+┣　.env - docker生成の際に設定される環境変数
+┣　.gitignore
+┣ docker-compse.yml - docker-composeの設定ファイル
+┣ dockerfile - appの設定ファイル
+┣ LICENSE
+┗ readme.md
 
 ## DBについて
 
@@ -41,11 +60,11 @@ pass
 テーブルを使用したい場合は適度に変更してください。
 
 ## .envについて
-gitのパブリックリポジトリなどに上げる際は.gitignoreに追加してください
+デフォルトでは設定のため`gitignore`に追加していませんgitのパブリックリポジトリなどに上げる際は.gitignoreに追加してください
 
-### 各変数の説明
+### .envにある各変数の説明
 
-`MYSQL_USER=` mysqlが自動で生成してくれるユーザー
+`MYSQL_USER` mysqlが自動で生成してくれるユーザー
 
 `MYSQL_DATABASE`mysqlが自動で生成してくれるデータベース
 
