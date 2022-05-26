@@ -33,17 +33,29 @@ docker-compose up --build
 
 flask-docker
 ┣ database/ 
+
 ┃   └ dockerfile - dbの設定に使うdockerfile
+
 ┣ exemple/ - デフォルトでflaskが読み込まれるディレクトリ
+
 ┃   └ app.py - デフォルトで読み込まれるpythonファイル
+
 ┣　initdb.d/ - db作成時に読み込まれるディレクトリ
+
 ┃   └ init.sql - 自動でsqlが実行されるファイル
+
 ┣　.env - docker生成の際に設定される環境変数
+
 ┣　.gitignore
+
 ┣ docker-compse.yml - docker-composeの設定ファイル
+
 ┣ dockerfile - appの設定ファイル
+
 ┣ LICENSE
+
 ┗ readme.md
+
 
 ## DBについて
 
