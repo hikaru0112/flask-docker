@@ -15,6 +15,26 @@ Flaskなどについてはpipに依存するため不定
 
 各自必要なパッケージなどはディレクトリ直下の`docekrfile`に追記してください。
 
+## 環境構築
+
+テンプレートリポジトリに設定してあるので各自githubの`Use this template`からリポジトリを作成してください
+
+
+### Windows(WSL2が使用できる環境が推奨です。)
+
+* [Dockerのインストール(DockerHub)](https://docs.docker.com/desktop/windows/install/)
+
+* [WSL2の導入(Microsoft Docs)](https://docs.microsoft.com/ja-jp/windows/wsl/install)
+
+
+### Mac OS
+
+```bash
+brew install docker
+brew install docker-compose
+```
+
+
 ## 実行方法
 
 
