@@ -1,4 +1,5 @@
 # flask_template
+
 Flaskの環境をDockerでワンライナーで構築、開発環境を切り離せるアプリケーションです。
 
 ## デフォルトのイメージ名
@@ -8,6 +9,7 @@ Flaskの環境をDockerでワンライナーで構築、開発環境を切り離
 
 
 ## DockerImage
+
 * mysql:8.0-oracle
 * Python:3
 
@@ -37,7 +39,6 @@ brew install docker-compose
 
 ## 実行方法
 
-
 ```bash
 docker-compose up --build
 ```
@@ -50,6 +51,7 @@ docker-compose up --build
 `.env`ファイル内の`FLASK_APP`環境変数で指定してください。
 
 ## ディレクトリについて
+
 ```
 flask-docker
 ┣ database/ 
@@ -90,7 +92,8 @@ pass
 ## .envについて
 デフォルトでは設定のため`gitignore`に追加していませんgitのパブリックリポジトリなどに上げる際は.gitignoreに追加してください
 
-### .envにある各変数の説明
+
+## .envにある各変数の説明
 
 `MYSQL_USER` mysqlが自動で生成してくれるユーザー
 
@@ -105,3 +108,14 @@ pass
 `FLASK_APP` Flaskで使用するファイルの指定
 
 `FLASK_ENV` flaskへの引数
+
+
+## セッションについて
+
+デフォルトではコメントアウトしていますが、そのままでも扱うことができます。`SECRET_KEY`に関してはコンテナ生成時に自動で生成しています。
+
+
+## その他
+
+このプロジェクトの全てのコードは、特に明記されていない限り、[MIT](https://opensource.org/licenses/MIT)ライセンスの元でライセンスされています。
+

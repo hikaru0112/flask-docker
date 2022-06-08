@@ -16,6 +16,7 @@ RUN pip install --upgrade setuptools
 
 RUN python -m pip install flask
 RUN python -m pip install mysql
-COPY . .
+ENV SECRET_KEY `cat /dev/urandom | base64 | fold -w 32 | head -n 1`
+
 
 CMD [ "flask", "run", "--host=0.0.0.0", "--debugger", "--reload" ]
